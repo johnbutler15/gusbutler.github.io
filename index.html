@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>John Butler Family Updates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    
     <!-- Link to our stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,18 +21,24 @@
 <header class="site-header">
     <h1>John Butler Family</h1>
     <nav class="nav">
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
     </nav>
 </header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <h2>Welcome to Our Family Corner</h2>
+    <p>Capturing life's little moments, one photo at a time.</p>
+</section>
 
 <main class="site-main">
 
     <section class="intro">
         <h2>Welcome!</h2>
         <p>
-            We’re glad you’re here. This page is a simple place for us to share
+            We're glad you're here. This page is a simple place for us to share
             updates, stories, and photos with family and friends. Feel free to
             bookmark it and come back often for the latest moments.
         </p>
@@ -34,17 +49,24 @@
 
         <div class="gallery-grid">
             <figure>
-                <img src="images/IMG_0374.jpeg" alt="Famly Picture">
+                <!-- Added class="gallery-img" and data-glightbox for the popup effect -->
+                <a href="images/IMG_0374.jpeg" class="gallery-img" data-glightbox="type: image">
+                    <img src="images/IMG_0374.jpeg" alt="Family Picture">
+                </a>
                 <figcaption>Family Picture – Jan 22, 2026</figcaption>
             </figure>
 
             <figure>
-                <img src="images/IMG_0520.jpeg" alt="Gus on YaYa's iPad">
+                <a href="images/IMG_0520.jpeg" class="gallery-img" data-glightbox="type: image">
+                    <img src="images/IMG_0520.jpeg" alt="Gus on YaYa's iPad">
+                </a>
                 <figcaption>Gus on YaYa's iPad - Mar 15, 2026</figcaption>
             </figure>
 
             <figure>
-                <img src="images/IMG_0534.jpeg" alt="Gus playing with empty sunglasses box">
+                <a href="images/IMG_0534.jpeg" class="gallery-img" data-glightbox="type: image">
+                    <img src="images/IMG_0534.jpeg" alt="Gus playing with empty sunglasses box">
+                </a>
                 <figcaption>Gus's new toy - mom's empty sunglasses box - Mar 25, 2026</figcaption>
             </figure>
 
@@ -64,6 +86,18 @@
 <footer class="site-footer">
     <p>© 2026 John Butler Family • All rights reserved.</p>
 </footer>
+
+<!-- GLightbox Script -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+    // Initialize the lightbox
+    const lightbox = GLightbox({
+        selector: '.gallery-img',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+</script>
 
 </body>
 </html>
