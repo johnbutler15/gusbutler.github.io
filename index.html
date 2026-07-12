@@ -16,15 +16,19 @@
     <!-- Link to our stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="site-body">
 
 <header class="site-header">
     <h1>Gus Butler's Very Own Website</h1>
     <nav class="nav">
         <a href="#home">Home</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#milestones">Milestones</a>
         <a href="#gallery">Gallery</a>
+        <a href="#guestbook">Guestbook</a>
         <a href="#about">About</a>
     </nav>
+    <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">🌙</button>
 </header>
 
 <!-- Hero Section -->
@@ -44,92 +48,155 @@
         </p>
     </section>
 
+    <section id="favorites" class="favorites-section">
+        <h2>Gus's Favorites 🧸</h2>
+        <div class="favorites-grid">
+            <div class="favorite-item">
+                <strong>Favorite Toy:</strong> <span>Mom's empty sunglasses box</span>
+            </div>
+            <div class="favorite-item">
+                <strong>Favorite Food:</strong> <span>Blueberries & Bananas</span>
+            </div>
+            <div class="favorite-item">
+                <strong>Current Obsession:</strong> <span>Dogs & iPads</span>
+            </div>
+            <div class="favorite-item">
+                <strong>Favorite Activity:</strong> <span>Couch snuggles</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="milestones" class="milestones-section">
+        <h2>Milestones 🌟</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="date">Nov 2025</span>
+                <p>First big family adventures with Addi!</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">Jan 2026</span>
+                <p>Becoming a pro at family photos.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">Mar 2026</span>
+                <p>Discovered the magic of YaYa's iPad.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">Apr 2026</span>
+                <p>Celebrated Easter with a giant Piñata!</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">May 2026</span>
+                <p>Officially the cutest Alabama fan in the world.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="gallery" class="gallery-section">
-        <h2>Photo Gallery</h2>
+        <h2 class="section-title">Photo Gallery</h2>
 
-        <div class="gallery-grid">
-            <figure>
-                <a href="images/IMG_0193.jpeg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/IMG_0193.jpeg" alt="Addi and Gus">
-                </a>
-                <figcaption>Addi and Gus - Nov 27, 2025</figcaption>
-            </figure>
+        <!-- Family Time -->
+        <div class="gallery-category">
+            <h3>👨‍👩‍👧‍👦 Family Time</h3>
+            <div class="gallery-masonry">
+                <figure>
+                    <a href="images/IMG_0193.jpeg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/IMG_0193.jpeg" alt="Addi and Gus">
+                    </a>
+                    <figcaption>Addi and Gus - Nov 27, 2025</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/IMG_0374.jpeg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/IMG_0374.jpeg" alt="Family Picture">
+                    </a>
+                    <figcaption>Family Picture – Jan 22, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/photo-2026-04-11T23-04-37.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-04-11T23-04-37.jpg" alt="Best friends sharing couch time">
+                    </a>
+                    <figcaption>Best friends sharing couch time - Apr 11, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/photo-2026-04-11T23-20-35.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-04-11T23-20-35.jpg" alt="Saturday night snuggles">
+                    </a>
+                    <figcaption>Saturday night snuggles - Apr 11, 2026</figcaption>
+                </figure>
+            </div>
+        </div>
 
-            <figure>
-                <!-- Added class="gallery-img" and data-glightbox for the popup effect -->
-                <a href="images/IMG_0374.jpeg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/IMG_0374.jpeg" alt="Family Picture">
-                </a>
-                <figcaption>Family Picture – Jan 22, 2026</figcaption>
-            </figure>
+        <!-- Silly Moments -->
+        <div class="gallery-category">
+            <h3>🤪 Silly Moments</h3>
+            <div class="gallery-masonry">
+                <figure>
+                    <a href="images/photo-2026-04-11T22-10-18.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-04-11T22-10-18.jpg" alt="Blood pressure check">
+                    </a>
+                    <figcaption>What a good blood pressure for a 2 year old? - Mar 1, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/IMG_0520.jpeg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/IMG_0520.jpeg" alt="Gus on YaYa's iPad">
+                    </a>
+                    <figcaption>Gus on YaYa's iPad - Mar 15, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/IMG_0534.jpeg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/IMG_0534.jpeg" alt="Empty sunglasses box">
+                    </a>
+                    <figcaption>Gus's new toy - mom's empty sunglasses box - Mar 25, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/photo-2026-04-11T22-55-34.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-04-11T22-55-34.jpg" alt="Is this on the right way?">
+                    </a>
+                    <figcaption>Is this on the right way? - Apr 11, 2026</figcaption>
+                </figure>
+            </div>
+        </div>
 
-            <figure>
-                <a href="images/photo-2026-04-11T22-10-18.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-04-11T22-10-18.jpg" alt="What a good blood pressure for a 2 year old?">
-                </a>
-                <figcaption>What a good blood pressure for a 2 year old? - Mar 1, 2026</figcaption>
-            </figure>
+        <!-- Alabama Spirit -->
+        <div class="gallery-category">
+            <h3>🐘 Alabama Spirit</h3>
+            <div class="gallery-masonry">
+                <figure>
+                    <a href="images/photo-2026-05-20T19-41-37.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-05-20T19-41-37.jpg" alt="Cutest Alabama fan ever">
+                    </a>
+                    <figcaption>Cutest Alabama fan ever - May 20, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/photo-2026-04-11T21-43-53.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-04-11T21-43-53.jpg" alt="Easter Piñata">
+                    </a>
+                    <figcaption>Easter Piñata - Apr 5, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/photo-2026-05-20T19-35-51.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-05-20T19-35-51.jpg" alt="New picture">
+                    </a>
+                    <figcaption>New addition - May 20, 2026</figcaption>
+                </figure>
+                <figure>
+                    <a href="images/photo-2026-07-12T18-27-00.jpg" class="gallery-img" data-glightbox="type: image">
+                        <img src="images/photo-2026-07-12T18-27-00.jpg" alt="Playtime with PawPaw">
+                    </a>
+                    <figcaption>Playtime with PawPaw - Jun 28, 2026</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
 
-
-            <figure>
-                <a href="images/IMG_0520.jpeg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/IMG_0520.jpeg" alt="Gus on YaYa's iPad">
-                </a>
-                <figcaption>Gus on YaYa's iPad - Mar 15, 2026</figcaption>
-            </figure>
-
-            <figure>
-                <a href="images/IMG_0534.jpeg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/IMG_0534.jpeg" alt="Gus playing with empty sunglasses box">
-                </a>
-                <figcaption>Gus's new toy - mom's empty sunglasses box - Mar 25, 2026</figcaption>
-            </figure>
-
-            <figure>
-                <a href="images/photo-2026-04-11T21-43-53.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-04-11T21-43-53.jpg" alt="Easter Piñata">
-                </a>
-                <figcaption>Easter Piñata - Apr 5, 2026</figcaption>
-            </figure>
-
-
-
-            <figure>
-                <a href="images/photo-2026-04-11T22-55-34.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-04-11T22-55-34.jpg" alt="Is this on the right way?">
-                </a>
-                <figcaption>Is this on the right way? - Apr 11, 2026</figcaption>
-            </figure>
-
-            <figure>
-                <a href="images/photo-2026-04-11T23-04-37.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-04-11T23-04-37.jpg" alt="Best friends sharing couch time - nothing beats a sleepy pup and a happy kiddo">
-                </a>
-                <figcaption>Best friends sharing couch time - nothing beats a sleepy pup and a happy kiddo - Apr 11, 2026</figcaption>
-            </figure>
-
-            <figure>
-                <a href="images/photo-2026-04-11T23-20-35.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-04-11T23-20-35.jpg" alt="Saturday night snuggles with my favorite little guy - these are the moments that matter most">
-                </a>
-                <figcaption>Saturday night snuggles with my favorite little guy - these are the moments that matter most - Apr 11, 2026</figcaption>
-            </figure>
-
-            <figure>
-                <a href="images/photo-2026-05-20T19-41-37.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-05-20T19-41-37.jpg" alt="Cutest Alabama fan ever">
-                </a>
-                <figcaption>Cutest Alabama fan ever - May 20, 2026</figcaption>
-            </figure>
-
-            <figure>
-                <a href="images/photo-2026-07-12T18-27-00.jpg" class="gallery-img" data-glightbox="type: image">
-                    <img src="images/photo-2026-07-12T18-27-00.jpg" alt="Playtime with PawPaw">
-                </a>
-                <figcaption>Playtime with PawPaw - Jun 28, 2026</figcaption>
-            </figure>
-
-            <!-- Add more <figure> blocks as you like -->
+    <section id="guestbook" class="guestbook-section">
+        <h2>Letters to Gus 💌</h2>
+        <p>Leave a little message for Gus to read when he grows up!</p>
+        <div class="guestbook-container">
+            <div class="form-placeholder">
+                <p>✨ Guestbook Form Coming Soon ✨</p>
+                <p><small>John, once you have a non-Google form link, I can embed it here!</small></p>
+            </div>
         </div>
     </section>
 
@@ -156,6 +223,23 @@
         loop: true,
         autoplayVideos: true
     });
+
+    // Dark Mode Toggle Logic
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        toggleBtn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('gus-dark-mode', isDark);
+    });
+
+    // Load preference on startup
+    if (localStorage.getItem('gus-dark-mode') === 'true') {
+        body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️';
+    }
 </script>
 
 </body>
